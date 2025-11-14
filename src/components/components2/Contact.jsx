@@ -1,12 +1,11 @@
 export default function Contact() {
   return (
     <section id="contact">
-      <h2>Place Your Order Today</h2>
-      <p>Click the link below to start your order!</p>
-
-    <a href="https://forms.gle/gk4T75TMzBK9Gx3t8" target="_blank">
-      <button className="primary-btn">Order</button>
-    </a>
+      <h2>Contact Me</h2>
+      <div className="footer-links">
+        <a href="https://www.linkedin.com/in/abdirashid1/" target="blank" id="linkedin-link">LinkedIn</a>
+        <a href="mailto:abdirashidahmed04@gmail.com" target="blank" id="email-link">Email</a>
+      </div>
     </section>
   );
 }

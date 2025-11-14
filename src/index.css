@@ -1,217 +1,154 @@
+/* === GLOBAL === */
 html {
   scroll-behavior: smooth;
 }
 
-/* === BASE === */
 body {
-  background-color: #fafafa;
-  color: #333;
-  font-family: 'Poppins', sans-serif;
-  text-align: center;
-  line-height: 1.6;
   margin: 0;
   padding: 0;
   width: 100vw;
   overflow-x: hidden;
+  background-color: #fafafa;
+  color: #333;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  text-align: center;
 }
 
-/* === MAIN LAYOUT === */
+/* === LAYOUT === */
 #main-div {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0;
   width: 100%;
 }
 
-/* === SECTION BANDS === */
+/* === SECTIONS === */
 section {
   width: 100%;
   padding: 80px 20px;
 }
 
-section:nth-of-type(odd) { background-color: #ffffff; }
-section:nth-of-type(even) { background-color: #f4f6f8; }
+section:nth-of-type(odd) {
+  background-color: #fff;
+}
+
+section:nth-of-type(even) {
+  background-color: #f4f6f8;
+}
 
 /* === TYPOGRAPHY === */
+h1, h2, h3 {
+  margin: 0 0 20px 0;
+  font-weight: 600;
+}
+
 h1 {
   font-size: 3.5rem;
-  margin-bottom: 15px;
   color: #222;
 }
+
 h2 {
   font-size: 2.5rem;
-  color: #4a90e2; /* changed from coral */
-  margin: 10px 0 25px 0;
+  color: #4a90e2;
 }
-h3 {
-  font-size: 1.6rem;
-  color: #555;
-  margin-bottom: 20px;
-}
+
 .subtext {
   font-size: 1.1rem;
   color: #666;
   margin-bottom: 25px;
 }
 
-/* === PORTFOLIO === */
-.portfolio-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-}
-
-.portfolio-grid img {
-  width: 300px;
-  border-radius: 15px;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-}
-
-.portfolio-grid img:hover {
-  transform: scale(1.05);
-  opacity: 0.95;
-}
-
-/* === LISTS === */
-section ul {
-  list-style: none;
-  padding-left: 0;
-  margin: 20px 0 30px 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-}
-
-#why-me ul li {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 1.1rem;
-  color: #444;
-}
-
-#why-me ul li::before {
-  content: "✔";
-  color: #d9ba3e;
-  font-weight: bold;
-  flex-shrink: 0;
-}
-
-/* === PRICING === */
-#pricing ul li {
-  font-size: 1.1rem;
-  color: #333;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  background-color: #ffffff;
-  padding: 12px 20px;
-  border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  width: fit-content;
-  margin-bottom: 15px;
-}
-
 /* === BUTTONS === */
 .primary-btn {
-  background-color: #4a90e2; /* changed from coral */
+  display: inline-block;
   padding: 16px 36px;
-  border-radius: 30px;
-  color: white;
-  font-weight: 600;
-  cursor: pointer;
-  border: none;
   font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #4a90e2;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 3px 10px rgba(74,144,226,0.3); /* match blue */
+  box-shadow: 0 3px 10px rgba(74,144,226,0.3);
 }
 
 .primary-btn:hover {
-  background-color: #357ab7; /* darker blue hover */
+  background-color: #357ab7;
   transform: scale(1.05);
   box-shadow: 0 4px 12px rgba(53,122,183,0.4);
 }
 
-/* === CONTACT FORM === */
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  width: 100%;
-  max-width: 500px;
-  margin: 0 auto;
+/* === CONTACT LINKS === */
+.footer-links {
+  margin-top: 20px;
 }
 
-input, textarea, select {
-  background-color: #fff;
-  color: #333;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 14px;
-  font-size: 1rem;
-  transition: border 0.3s ease, box-shadow 0.3s ease;
-}
-
-input:focus, textarea:focus, select:focus {
-  outline: none;
-  border-color: #4a90e2;
-  box-shadow: 0 0 8px rgba(74,144,226,0.3);
-}
-
-textarea { resize: none; min-height: 120px; }
-select { appearance: none; cursor: pointer; }
-
-/* === FOOTER === */
-footer {
-  border-top: 1px solid rgba(0,0,0,0.08);
-  padding: 50px 20px 30px 20px;
-  width: 100%;
-  text-align: center;
-  background-color: #fafafa;
-}
-
-.footer-links { margin-top: 20px; }
 .footer-links a {
-  color: #4a90e2; /* changed from coral */
+  color: #4a90e2;
   margin: 0 15px;
-  text-decoration: none;
   font-size: 1rem;
+  text-decoration: none;
   opacity: 0.9;
-  transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease, text-decoration 0.2s ease;
 }
+
 .footer-links a:hover {
   opacity: 1;
   text-decoration: underline;
 }
 
-/* === Top Banner (static) === */
+/* === FOOTER === */
+footer {
+  width: 100%;
+  padding: 50px 20px 30px;
+  text-align: center;
+  background-color: #fafafa;
+  border-top: 1px solid rgba(0,0,0,0.08);
+}
+
+/* === TOP BANNER === */
 .top-banner {
   width: 100%;
-  background-color: #ffed4d; /* calm yellow */
-  color: #333;
-  text-align: center;
   padding: 12px 0;
-  font-weight: 500;
+  background-color: #ffed4d;
+  color: #333;
   font-size: 0.95rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05); /* subtle depth */
+  font-weight: 500;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
-/* === Charity Note === */
-#charity-note {
-  font-size: 1.8rem;
-  color: #4a90e2; /* blue accent */
-  margin: 8px 0 20px;
+/* === PORTFOLIO LINKS === */
+.portfolio-link {
+  display: inline-block;
+  color: #4a90e2;           /* main blue */
+  font-weight: 500;
+  text-decoration: none;     /* remove default underline */
+  border-bottom: 2px solid transparent; /* subtle hover effect */
+  transition: all 0.3s ease;
+  padding-bottom: 2px;       /* small space for hover underline */
 }
+
+.portfolio-link:hover {
+  color: #357ab7;            /* darker blue on hover */
+  border-bottom-color: #357ab7; /* animated underline */
+  transform: translateY(-2px);  /* subtle lift for interactivity */
+}
+
+.portfolio-group p {
+  max-width: 600px;
+  margin: 10px auto;
+  text-align: left;   /* center the text itself */
+  line-height: 1.6;
+  font-size: 1rem;
+  color: #555;
+}
+
+
 
 /* === RESPONSIVE === */
-@media(max-width:768px){
+@media (max-width: 768px) {
   h1 { font-size: 2.8rem; }
   h2 { font-size: 2rem; }
-  h3 { font-size: 1.3rem; }
-  .portfolio-grid img { width: 90%; max-width: 300px; }
-  form { width: 90%; }
 }
