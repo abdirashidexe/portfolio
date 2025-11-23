@@ -27,7 +27,7 @@ function App() {
         <div style={{ fontSize: "1rem", opacity: 0.8 }}>
           You can still reach me here: <br />
           <a
-            href="mailto:your-email@example.com"
+            href="mailto:abdirashidahmed04@gmail.com"
             style={{ color: "#4fb3ff" }}
           >
             abdirashidahmed04@gmail.com
